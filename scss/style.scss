@@ -1,47 +1,234 @@
+$tl:#091133;
+$fz:36px;
+
+
+@mixin buttonstyle ($color:#fafafa, $background: #111B47, $border-radius: 2px, $border: none,){
+    color: $color;
+    background: $background;
+    border-radius: $border-radius;
+    border: $border;
+   
+}
+@mixin titlestyle ($color:#091133, $font-size: 36px ) {
+    color: $color;
+    font-size: $font-size;
+
+}
+@mixin subsectionstyle ($color: #6F7CB2, $font-size: 16px ) {
+    color: $color;
+    font-size: $font-size;
+    
+}
+@mixin flex ($display:flex,$align-items: center, $justify-content: space-around ) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+    
+
+
+
+
+
+
+
 body{
     font-family: 'Roboto', sans-serif;
     
-    
-
 }
+
 .container{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.section1>a{
+
+
+
+
+
+.section1{
+    a{
     color: #505F98;
     text-decoration: none;
+    }
 }
-.header-button{
-    background: #111B47;
-border-radius: 2px;
-color: #FFFFFF;
-border: none;
-width: 160px;
-height: 26px;
-}
-.container2{
-    padding: 247px;
-    display: flex;
-    flex-direction: column;
-}
-.container2>.section6>button{
-    background: #111B47;
-border-radius: 2px;
-border: none;
-width: 189px;
-height: 36px;
-color: #FFFFFF;
 
-}
-.container2>.section6>.btn1{
-    background: #FFFFFF;
-    color: #111B47;
-    border: 1px solid;
-}
 header{
     background-image: url(../img/designer_1.png);
     background-position: right;
     background-repeat: no-repeat;
+    button{
+        @include buttonstyle;
+        width: 160px;
+        height: 26px;
+    }
 }
+
+.container2{
+    padding: 247px;
+    @include flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: end;
+      .section5{
+          p{
+              @include subsectionstyle;
+          }
+      }
+      .section6{
+        button{
+            @include buttonstyle;
+        }
+        .btn1{
+            @include buttonstyle;
+            background: #FFFFFF;
+            color: #111B47;
+            border: 1px solid;
+        }
+        
+        }
+        h1{
+           @include titlestyle;
+           font-size: 50px; 
+        }
+        
+        
+    }
+
+.container3{
+    background-image: url(../img/undraw_mobile_login_ikmv.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 247px;
+    .section7{
+        h2{
+            @include titlestyle;
+        }
+        p{
+            @include subsectionstyle;
+    
+        }
+       
+    }
+   
+    .section8{
+        @include flex;
+        justify-content: end;
+    }
+    h2{
+        @include titlestyle;
+    }
+    p{
+        @include subsectionstyle;
+        font-size: 12px;
+        color: #5D6970;
+    }
+    .cardinfo2{
+        padding-left: 10px;
+    }
+}
+
+
+main{
+    
+    
+}
+.container4{
+    @include flex;
+    justify-content: space-evenly;
+    h2{
+        @include titlestyle;
+
+    }
+    p{
+        @include subsectionstyle;
+
+    }
+    
+}
+.container5{
+    padding-top: 100px;
+    @include flex;
+    justify-content: space-evenly;
+    .section10{
+        margin-right: 30px;
+    }
+    h2{
+        @include titlestyle;
+    }
+    p{
+        @include subsectionstyle;
+    }
+}
+.container6{
+    padding-top: 100px;
+    @include flex;
+    justify-content: space-evenly;
+    h2{
+        @include titlestyle;
+    }
+    p{
+        @include subsectionstyle;
+    }
+}
+.container7{
+    padding-top: 100px;
+    background-color: #E7ECFF;
+    
+    
+    @include flex;
+    flex-direction: column;
+
+
+    h2{
+        @include titlestyle;
+        
+    }
+    p{
+        @include subsectionstyle;
+    }
+    
+    
+    button{
+        @include buttonstyle;
+        width: 189px;
+        height: 32px;
+    }
+    .btntext{
+        @include subsectionstyle;
+        font-size: 12px;
+        color: #5D6970;
+
+    }
+
+}
+.container8{
+    background-color: #b8c7fc;
+    @include flex;
+    p{
+        margin-left: -43px;
+    }
+    h2{
+        @include titlestyle;
+        color: #37447e;
+        font-size: 26px;
+    }
+    button{
+        @include buttonstyle;
+        width: 109px;
+        height: 26px;
+
+    }
+}
+.container9{
+    
+    background-color: #b8c7fc;
+    @include flex;
+    a{
+        text-decoration: none;
+        color: #929ECC;
+    }
+}
+
+
